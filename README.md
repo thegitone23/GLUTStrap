@@ -1,2 +1,2 @@
 # GLUTStrap
-This repository contains template(s) for GLUT based C++ programs
+This repository contains code template(s) for GLUT based C++ programs.
