@@ -3,8 +3,6 @@
 //Assuming GLUT Has Been Set-Up To Be Used With GCC
 //Build Using g++ GLUTStrap.cpp  glut32.lib -lopengl32 -lglu32
 //Executable Generated Will Require glut32.dll And glut32.lib In The Same Folder (On Windows)
-
-#include <windows.h> //Required On Windows
 #include <GL/glut.h>
 
 //draw a pixel at x,y
