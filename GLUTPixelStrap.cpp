@@ -28,7 +28,7 @@ void init()
     glutInitWindowSize(800,600);
     glutCreateWindow("MyGLUTProgram");
     glClearColor(0,0,0,0); //setting clear to black
-    glClear(GL_COLOR_BUFFER_BIT) //applying the clear
+    glClear(GL_COLOR_BUFFER_BIT); //applying the clear
     glColor3f(0.8,0.0,0.0); //drawings will have red shade
     gluOrtho2D(-399,400,-299,300); //defined limits in which to draw
 }
