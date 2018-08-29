@@ -1,9 +1,22 @@
 //This Is A Basic GLUT Pixel Drawing Program Template
 //Put Your Drawing Logic In draw()
 //Assuming GLUT Has Been Set-Up To Be Used With GCC
-//Build Using g++ GLUTStrap.cpp  glut32.lib -lopengl32 -lglu32
+//Build on Windows using Using g++ GLUTStrap.cpp  glut32.lib -lopengl32 -lglu32
+//Build on linux using g++ GLUTStrap.cpp -lGL -lGLU -lglut
 //Executable Generated Will Require glut32.dll And glut32.lib In The Same Folder (On Windows)
 #include <GL/glut.h>
+#include <bits/stdc++.h>
+using namespace std;
+void drawPixel(GLint x, GLint y);
+
+void my_draw(){
+    //Code Your Drawing Logic Here
+    // example code
+    for(int x=0; x<50; x++){
+        drawPixel(x,x);
+    }
+
+}
 
 //draw a pixel at x,y
 void drawPixel(GLint x, GLint y)
@@ -16,9 +29,11 @@ void drawPixel(GLint x, GLint y)
 //draw whatever you feel like in here
 void draw()
 {
-    //Code Your Drawing Logic Here
-    
-    
+    glClearColor(0,0,0,0); //setting clear to black
+    glClear(GL_COLOR_BUFFER_BIT); //applying the clear
+
+    my_draw();
+
     glFlush();
 }
 
@@ -35,7 +50,7 @@ void init()
 
 int main(int argc, char **argv)
 {
-    glutInit(&argc,argv); 
+    glutInit(&argc,argv);
     init();
     glutDisplayFunc(draw);
     glutMainLoop();
